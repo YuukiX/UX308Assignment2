@@ -1,25 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <link rel="manifest" href="/magic.webmanifest">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <meta name="theme-color" content="white" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Magic 8 Ball">
-    <meta name="msapplication-TileImage" content="/img/ms144.png">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <!-- JQuery / Materialize CSS + JavaScript imports -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <style>
+        #container {
+            padding-left: 300px;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        @media only screen and (max-width : 992px) {
+            #container {
+                padding-left: 0px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        h1 {
+            background-color: rgb(255, 251, 192);
+            padding: 30px;
+        }
+        
+        body{
+            margin: 30px;
+        }
+        
+        li{
+            background-color: rgb(255, 251, 192);
+        }
+    </style>
 
 </head>
 
 <body>
-    <form id="magic8ball">
-        <h1>Magic 8 ball</h1>
-        <h2>the 8 ball knows</h2>
-        <p>Ask me anything I will answer.</p>
-        <input id="question" placeholder="enter a question" />
-        <button type="submit">Ask</button>
-        <p id="answer">If you had asked The answer would be here</p>
-    </form>
-    <script src="js/main.js" type="module"></script>
+    <div id="container">
+
+        <div id="menu">
+
+            <ul id="slide-out" class="side-nav fixed show-on-large-only">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experince">Experience</a></li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header">Projects<i class="projects"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#unite">UNITE</a></li>
+                                    <li><a href="#emergency-keychain">Emergency Contact Keychain</a></li>
+                                    <li><a href="#occupancy-tracker">Occupancy Tracker</a></li>
+                                    <li><a href="#laurier-registration">Laurier Registration Guide</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i
+                    class="material-icons">menu</i></a>
+
+            <h1>Yuki's Resume</h1>
+
+            <p>Third Year User Experience Designer</p>
+
+            <section id="about">
+                <h2>About Me</h2>
+                <img src="https://static.wixstatic.com/media/5b446b_e7502e5911ba45b98cd8a007c4717c67~mv2.jpg/v1/crop/x_0,y_269,w_1078,h_1127/fill/w_962,h_1006,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_4270.jpg"
+                    alt="Yuki profile" width="400" height="400">
+                <p>
+                    Hi, I'm Yuki Xu and I am currently a third year User Experience Design student at Wilfrid Laurier
+                    University. Although I am a beginner in many things, I am a rounded team player who’s interested and
+                    dabbles between technology and the arts; ranging from gamification to illustrations. The combination
+                    of these two subjects led me to discover the world of UXD/UI and I'm looking forward to be part of
+                    it!
+                    <br />
+                    <br />
+                    I am also an otaku, casual gamer, space lover, artist and a foodie.
+                </p>
+                <br />
+                <h3>Hobbies</h3>
+                <p>
+                    • Cooking
+                    <br />
+                    • Badminton
+                    <br />
+                    • Drawing & Sketching
+                    <br />
+                    • Watching Netflix & Anime
+                    <br />
+                    • Video games & board games
+                </p>
+
+                <img src="https://static.wixstatic.com/media/5b446b_6fd67e81979b4093ab0836eb780ec40b~mv2.png/v1/crop/x_0,y_0,w_667,h_521/fill/w_420,h_324,al_c,usm_0.66_1.00_0.01,enc_auto/Screen%20Shot%202021-09-12%20at%2011_13_16%20PM.png"
+                    alt="totoro" width="200" height="150">
+                <br />
+                <br />
+                <br />
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <p>
+                    <strong>BACHELOR OF USER EXPERIENCE DESIGN PROGRAM, WLU, BRANTFORD, ON 2019 - PRESENT</strong>
+                    <br />
+                    • Dean’s Honour Roll 2019 - 2020
+                    <br />
+                    <br />
+                    <strong>ONTARIO SECONDARY SCHOOL DIPLOMA, UNIONVILLE HIGH SCHOOL, UNIONVILLE, ON 2015 -
+                        2019</strong>
+                    <br />
+                    • SHSM Red Seal (Arts & Culture)
+                    <br />
+                </p>
+                <br />
+                <h3>Skills/Tools</h3>
+                <p>
+                    <strong>DESIGN:</strong> Sketching, wireframing & mockups, visual design, illustration, prototyping,
+                    and user
+                    research
+                    <br />
+                    <br />
+                    <strong>TECHNICAL:</strong> Adobe XD, Illustrator, Photoshop, InDesign, Animate, Figma, Google
+                    Suite, Microsoft Word,
+                    HTML/CSS, Javascript, Unity, Autodesk Maya, and SketchBook
+                    <br />
+                    <br />
+                    <br />
+                    <img
+                        src="https://static.wixstatic.com/media/5b446b_e56e76b51b8744e4872f07c27d0a38f4~mv2.png/v1/fill/w_142,h_126,al_c,usm_0.66_1.00_0.01,enc_auto/Screen%20Shot%202020-04-11%20at%204_41_25%20PM.png">
+                    <img
+                        src="https://static.wixstatic.com/media/5b446b_2086af9a21d043349d8234941fdf8c6a~mv2.png/v1/fill/w_140,h_126,al_c,usm_0.66_1.00_0.01,enc_auto/Screen%20Shot%202020-04-11%20at%204_53_30%20PM.png">
+                    <img
+                        src="https://static.wixstatic.com/media/5b446b_10a6f47de51d415cb6d5f422ef62db3b~mv2.png/v1/fill/w_130,h_126,al_c,usm_0.66_1.00_0.01,enc_auto/Screen%20Shot%202021-09-12%20at%2010_25_35%20PM.png">
+                </p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </section>
+
+            <section id="experince">
+                <h2>Experience</h2>
+                <p>
+                    <strong>PEER ACADEMIC COACH, WILFRID LAURIER UNIVERSITY, BRANTFORD, ON, 2021</strong>
+                    <br />
+                    • Mentor first year UXD students
+                    <br />
+                    • Participant as a judge in the UX100 client project alongside Abby Groodrum and other judges
+                    <br />
+                    • Communicated student concerns with Lorraine
+                    <br />
+                    <br />
+                    <br />
+                    <strong>CO-OP/FREELANCE, MCOUAT PARTNERSHIP, MARKHAM, ON, 2018</strong>
+                    <br />
+                    • Created and designed keymaps, logos, handouts, e-blasts, etc.
+                    <br />
+                    • Revised previous works from various clients using Adobe Photoshop, InDesign, and
+                    Illustrator
+                    <br />
+                    • Communicated with the marketing team and company staff members in person and
+                    through email
+                    <br />
+                    <br />
+                    <br />
+                    <strong>VOLUNTEER, LAURIER OPEN HOUSE, BRANTFORD, ON, NOVEMBER 2019, 5 HOURS</strong>
+                    <br />
+                    • Conversed and advocated the UXD program to new students and parents by answering questions
+                    <br />
+                    • Connected with other UXD students, seniors, and coordinators
+                </p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </section>
+
+            <section id="unite">
+                <h2>UNITE : Youth Advocacy Platform</h2>
+                <h3>Online Engagement Platform</h3>
+                <p>
+                    Together as Team Neptune, we were tasked by UNICEF to ideate engaging solutions for youth advocacy
+                    using an online platform. UNITE is an app that not only helps promote and provide resources
+                    surrounding youth advocacy, it provides a way for users to take action and discuss issues with other
+                    youths around the world.
+                </p>
+                <img src="https://static.wixstatic.com/media/5b446b_603b75cdeb8f41ff9d271f4ef44fa291~mv2.png/v1/fill/w_1386,h_668,al_c,enc_auto/UNITE%20Lofi%20Wireframes.png"
+                    width="700" height=auto>
+                <br />
+                <br />
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aHpujaHizUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </section>
+
+            <section id="emergency-keychain">
+                <h2>Emergency Contact Keychain Device</h2>
+                <h3>March 2021 | UX202: Maker Lab II</h3>
+                <p>
+                    As a group, we were tasked to create and design a speculative haptic tool that integrates media
+                    technology to help solve a problem within the city of Brantford. To regard the safety of walking
+                    outside in Brantford at night, we decide to design an Emergency Contact Keychain Device that would
+                    be given for free to Laurier students. Our device includes a flashlight, GPS tracker, and an
+                    emergency button that would contact your location to the police immediately. In addition, the
+                    keychain would be linked to the LORIS account of the specific student, and their profile can be
+                    accessed through the Laurier’s Safety Hawk app. The app provides further details and displays areas
+                    on the map that may be dangerous.
+                </p>
+                <img src="https://static.wixstatic.com/media/5b446b_10f6db06a7474acb9487ac46b5024718~mv2.png/v1/fill/w_1676,h_696,al_c,usm_0.66_1.00_0.01,enc_auto/Saftey%20Keychain%20Ideas.png"
+                    width="700" height=auto>
+                <br />
+                <br />
+                <img src="https://static.wixstatic.com/media/5b446b_9a48647798504811b2b20719770deee1~mv2.png/v1/fill/w_1654,h_952,al_c,usm_0.66_1.00_0.01,enc_auto/Safety%20Keychain%20Prototype.png" width="700" height=auto>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </section>
+
+            <section id="occupancy-tracker">
+                <h2>COVID-19 Occupancy Tracker</h2>
+                <h3>April 2021 | UX202: Maker Lab II</h3>
+                <p>
+                    As a group, we were tasked to design a speculative product that had a electronic component that
+                    connects to the internet and involves somatic experiences to solve a problem of our choice. Our team
+                    came up with the COVID-19 Occupancy Tracker that counts the amount of customers entering/exiting
+                    stores during the pandemic. Our design uses motion sensors that connects to automatic doors along
+                    with a tv monitor that would display the current count outside of the store. We also designed an
+                    optional app for customers to download that would showcase the current count with live updates and
+                    specific COVID protocols from the store the user has selected.
+                </p>
+                <img src="https://static.wixstatic.com/media/5b446b_2e5669c2c0d84c8e92c0ad0feedcad20~mv2.png/v1/fill/w_1654,h_856,al_c,usm_0.66_1.00_0.01,enc_auto/OccupancyApp.png"
+                    width="700" height=auto>
+                <br />
+                <br />
+                <img src="https://static.wixstatic.com/media/5b446b_9a861dce05b6471cac7f9d3c7e817e1b~mv2.png/v1/fill/w_1654,h_878,al_c,usm_0.66_1.00_0.01,enc_auto/Screen%20Shot%202021-04-19%20at%207_30_28%20PM.png" width="700" height=auto>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </section>
+
+            <section id="laurier-registration">
+                <h2>Laurier Registration Guide</h2>
+                <h3>UX100: Design Foundations I</h3>
+                <p>
+                    Together as Team MOSEEY, we were tasked by Wilfrid Laurier University to ideate a solution to
+                    provide a seamless registration process for incoming and mature students. Our solution involves
+                    redesigning the current registration guide by reducing text heavy content, adding more
+                    visuals/graphics, and making sure students can find non-restricted electives relative to their
+                    program.
+                </p>
+                <img src="https://static.wixstatic.com/media/5b446b_36688417c83c4a56b1f87b73d6097fb1~mv2.jpg/v1/fill/w_1390,h_1173,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b446b_36688417c83c4a56b1f87b73d6097fb1~mv2.jpg" width="700" height=auto>
+                <br />
+                <br />
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Wdt4Zorygj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </section>
+        </div>
+
+    </div>
+    <script>
+        $('.button-collapse').sideNav({
+            menuWidth: 300, // Default is 300
+            edge: 'left', // Choose the horizontal origin
+            closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            draggable: true // Choose whether you can drag to open on touch screens
+        });
+
+
+    </script>
 </body>
+
+</html>
